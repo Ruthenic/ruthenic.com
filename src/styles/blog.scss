@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    text-align: center;
+
+    .blog-post {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+    }
+}

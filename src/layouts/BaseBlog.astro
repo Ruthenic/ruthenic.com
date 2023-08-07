@@ -1,0 +1,26 @@
+---
+import "../styles/base.scss";
+import HeadBoilerplate from "../components/HeadBoilerplate.astro";
+import Footer from "../components/BlogFooter.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    entry: CollectionEntry<"blog">;
+}
+
+const { entry } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <title>{"ruthenic.com | " + entry.data.normalizedTitle ?? entry.data.title}</title>
+        <HeadBoilerplate />
+    </head>
+    <body>
+        <div class="content">
+            <h1 set:html={entry.data.title} />
+            <slot />
+        </div>
+        <Footer />
+    </body>
+</html>

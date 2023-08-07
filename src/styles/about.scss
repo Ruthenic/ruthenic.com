@@ -1,0 +1,27 @@
+@import "./variables.scss";
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    max-inline-size: 1280px;
+    margin-inline: auto;
+
+    row-gap: 2em;
+
+    .about-profile {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1em;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .about-image {
+            min-width: 256px;
+            max-width: 256px;
+            border-radius: 50%;
+        }
+    }
+}

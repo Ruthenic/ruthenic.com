@@ -1,0 +1,20 @@
+---
+interface Props {
+    name: string;
+    displayName?: string;
+    description: string;
+}
+
+const { name, description, displayName } = Astro.props;
+---
+
+<div class="about-profile">
+    <img
+        class="about-image"
+        src={`https://multiplex.ruthenic.com/avatars/714583473804935238/${name}.png`}
+    />
+    <div class="about-content">
+        <h2>{displayName ?? name}</h2>
+        <span>{description}</span>
+    </div>
+</div>

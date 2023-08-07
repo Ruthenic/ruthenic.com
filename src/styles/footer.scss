@@ -1,0 +1,29 @@
+@import "./base.scss";
+@import "./variables.scss";
+
+.footer {
+    background-color: $foreground-color;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 3em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        text-decoration: none;
+        margin-left: 0.5em;
+    }
+
+    img {
+        height: 2.5em;
+        &:last-of-type {
+            margin-right: 0.5em;
+        }
+    }
+}

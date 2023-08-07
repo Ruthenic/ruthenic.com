@@ -1,0 +1,24 @@
+---
+import "../styles/base.scss";
+import HeadBoilerplate from "../components/HeadBoilerplate.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <title>{"ruthenic.com | " + title}</title>
+        <HeadBoilerplate />
+    </head>
+    <body>
+        <div class="content">
+            <slot />
+        </div>
+        <Footer />
+    </body>
+</html>
