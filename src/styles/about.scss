@@ -28,9 +28,11 @@
 
         .about-image {
             border-radius: 50%;
+            min-width: 256px;
             max-width: 256px;
 
             @media screen and (max-width: 600px) {
+                min-width: unset;
                 width: 100%;
                 height: auto;
                 object-fit: contain;
